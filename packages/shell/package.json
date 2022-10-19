@@ -6,17 +6,33 @@
   "scripts": {
     "build": "webpack",
     "start": "electron .",
-    "test": "npm run build"
+    "test": "npm run build",
+    "buildApp": "electron-builder --win --x64"
+  },
+  "build": {
+    "productName": "test2022",
+    "appId": "com.zl.tf.test",
+    "copyright": "htf",
+    "files": [
+      "packages/**/*"
+    ],
+    "directories": {
+      "output": "out"
+    },
+    "asar": false,
+    "win": {
+      "icon": "logo.ico"
+    }
   },
   "license": "GPL-3.0",
   "author": "Samuel Maddock <sam@samuelmaddock.com>",
   "private": true,
   "dependencies": {
-    "electron": "15.0.0-beta.2",
     "electron-chrome-context-menu": "^1.0.1",
     "electron-chrome-extensions": "^3.4.0"
   },
   "devDependencies": {
+    "electron": "15.0.0-beta.2",
     "cross-env": "^7.0.2"
   }
 }
