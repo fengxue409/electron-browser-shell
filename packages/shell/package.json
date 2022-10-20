@@ -1,28 +1,41 @@
 {
   "name": "shell",
   "version": "1.0.0",
-  "description": "Minimum Viable Browser shell built on Electron.",
+  "description": "这是一个自定义的浏览器",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
     "start": "electron .",
     "test": "npm run build",
-    "buildApp": "electron-builder --win --x64"
+    "buildApp": "electron-builder"
   },
   "build": {
     "productName": "test2022",
     "appId": "com.zl.tf.test",
-    "copyright": "htf",
-    "files": [
-      "packages/**/*"
-    ],
+    "copyright": "Copyright © 2022 HTF♥WQQ",
+    "compression": "store",
     "directories": {
-      "output": "out"
+      "output": "../../out"
     },
-    "asar": false,
+    "asar": true,
     "win": {
-      "icon": "logo.ico"
-    }
+      "icon": "./applogo/logo256.ico"
+    },
+    "extraFiles":[{
+      "from":"../../extensions",
+      "to":"./extensions"
+    }],
+    "nsis": {
+      "oneClick": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "./applogo/logo.ico",
+      "uninstallerIcon": "./applogo/logo.ico",
+      "installerHeaderIcon": "./applogo/logo.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "test2022"
+      }
   },
   "license": "GPL-3.0",
   "author": "Samuel Maddock <sam@samuelmaddock.com>",
