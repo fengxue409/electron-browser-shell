@@ -34,7 +34,7 @@
       "installerHeaderIcon": "./applogo/logo.ico",
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
-      "shortcutName": "test2022"
+      "shortcutName": "test20221"
       }
   },
   "license": "GPL-3.0",
